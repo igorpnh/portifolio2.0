@@ -1,0 +1,20 @@
+@font-face {
+  font-family: "Garnet";
+  src: url("~/public/Garet-Book.woff") format("woff");
+  /* Outras propriedades da fonte, como weight e style */
+}
+
+@font-face {
+  font-family: "Glakome";
+  src: url("~/public/GlakomeRegular.woff") format("woff");
+  /* Outras propriedades da fonte, como weight e style */
+}
+
+
+.Garnet{
+  font-family: 'Garnet', sans-serif;
+}
+
+.Glakome {
+  font-family: 'Glakome', sans-serif;
+}

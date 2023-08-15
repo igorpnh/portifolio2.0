@@ -19,7 +19,7 @@ export default function Home() {
         <Grid gap={4} templateColumns='repeat(12, 1fr)'>
           <GridItem bg='red' colSpan={7}>
             <Flex direction={"column"}>
-              <Text p={0} m={0} fontSize={"106px"} className={styles.Glakome}>
+              <Text fontSize={"106px"} className={styles.Glakome}>
                 IGOR PINHEIRO
               </Text>
               <Flex  gap={4} bg='green' w='full' align={'flex-end'} direction={'column'}>

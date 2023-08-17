@@ -1,9 +1,23 @@
 import Head from "next/head";
 import { Inter } from "@next/font/google";
 import HoverText from "./components/HoverText";
-import { Text, Flex, Box, Grid, GridItem } from "@chakra-ui/react";
+import {
+  Text,
+  Flex,
+  Box,
+  Grid,
+  GridItem,
+  Divider,
+  IconButton,
+  Tooltip,
+} from "@chakra-ui/react";
 import styles from "./styles/fonts.module.css";
-
+import {
+  AiOutlineInstagram,
+  AiOutlineLinkedin,
+  AiOutlineGithub,
+} from "react-icons/ai";
+import { color } from "framer-motion";
 const inter = Inter({ subsets: ["latin"] });
 
 export default function Home() {
@@ -15,33 +29,94 @@ export default function Home() {
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <link rel="icon" href="" />
       </Head>
-      <main style={{ margin: "24px" }}>
-        <Grid gap={4} templateColumns='repeat(12, 1fr)'>
-          <GridItem bg='red' colSpan={7}>
+      <main style={{ margin: "24px 0 24px 24px" }}>
+        <Grid gap={4} templateColumns="repeat(12, 1fr)">
+          <GridItem colSpan={7}>
             <Flex direction={"column"}>
-              <Text fontSize={"106px"} className={styles.Glakome}>
+              <Text
+                color={"#FFFFFF"}
+                fontSize={"106px"}
+                className={styles.Glakome}
+              >
                 IGOR PINHEIRO
               </Text>
-              <Flex  gap={4} bg='green' w='full' align={'flex-end'} direction={'column'}>
+              <Flex gap={4} w="full" align={"flex-end"} direction={"column"}>
                 <Box
-                  p={"0.6px"}
+                  p={"3px 25px"}
+                  marginRight={"3.7rem"}
                   h={"fit-content"}
                   w={"fit-content"}
-                  background={"#FF9309"}
                   textAlign={"center"}
+                  bg={"#C8770F"}
+                  borderRadius={"15px 15px 0 15px"}
                 >
-                  <Text color={'white'} className={styles.Garnet} w={"fit-content"} fontSize={"24px"}>
+                  <Text
+                    color={"white"}
+                    className={styles.Garnet}
+                    w={"fit-content"}
+                    fontSize={"24px"}
+                    letterSpacing={2}
+                  >
                     ✌🏾 Hi there, fine?
                   </Text>
                 </Box>
-                <Box alignSelf={'flex-start'}>
-                  <Text>FullStack Developer 💻</Text>
+                <Box
+                  p={"3px 25px"}
+                  marginRight={"3.7rem"}
+                  h={"fit-content"}
+                  w={"fit-content"}
+                  background={"#2A6658"}
+                  textAlign={"center"}
+                  borderRadius={"15px 15px 15px 0 "}
+                  alignSelf={"flex-start"}
+                >
+                  <Text
+                    color={"white"}
+                    className={styles.Garnet}
+                    w={"fit-content"}
+                    fontSize={"24px"}
+                    letterSpacing={2}
+                  >
+                    Full Stack Developer 💻
+                  </Text>
                 </Box>
               </Flex>
             </Flex>
           </GridItem>
-          <GridItem bg='blue' colSpan={5}>
-            Lalála´lá
+          <GridItem position={"relative"} colStart={9} colSpan={4}>
+            <Divider ml={"auto"} w={"90%"} mt={"4rem"} />
+            <Flex ml={"4rem"} gap={3}>
+              <Tooltip fontSize={"xs"} bg={"#2C2C2C"} label={"Github"}>
+                <IconButton
+                  color={"white"}
+                  variant={"ghost"}
+                  _hover={{ bg: "transparent", transform: "scale(1.2)" }}
+                  fontSize={"2xl"}
+                  aria-label="github"
+                  icon={<AiOutlineGithub />}
+                />
+              </Tooltip>
+              <Tooltip fontSize={"xs"} bg={"#2C2C2C"} label={"Linkedin"}>
+                <IconButton
+                  color={"white"}
+                  variant={"ghost"}
+                  _hover={{ bg: "transparent", transform: "scale(1.2)" }}
+                  fontSize={"2xl"}
+                  aria-label="linkedin"
+                  icon={<AiOutlineLinkedin />}
+                />
+              </Tooltip>
+              <Tooltip fontSize={"xs"} bg={"#2C2C2C"} label={"Instagram"}>
+                <IconButton
+                  color={"white"}
+                  variant={"ghost"}
+                  _hover={{ bg: "transparent", transform: "scale(1.2)" }}
+                  fontSize={"2xl"}
+                  aria-label="instagram"
+                  icon={<AiOutlineInstagram />}
+                />
+              </Tooltip>
+            </Flex>
           </GridItem>
         </Grid>
       </main>
